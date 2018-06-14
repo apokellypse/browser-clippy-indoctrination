@@ -19,15 +19,13 @@
 	}
 
 	var jqueryUrl = chrome.runtime.getURL("jquery-1.7.min.js");
-	var agentUrl = chrome.runtime.getURL("script.js");
-	var jsUrl = chrome.runtime.getURL("clippy.min.js");
+	var jsUrl = chrome.runtime.getURL("clippy.js");
 	var cssUrl = chrome.runtime.getURL("clippy.css");
   	// document.getElementById("someImage").src = imgURL;
 
   	loadjscssfile(jqueryUrl, "js");
 	loadjscssfile(jsUrl, "js"); //dynamically load and add this .js file
 	loadjscssfile(cssUrl, "css"); ////dynamically load and add this .css file
-	loadjscssfile(agentUrl, "js");
 
 	// just place a div at top right
 	var div = document.createElement('div');

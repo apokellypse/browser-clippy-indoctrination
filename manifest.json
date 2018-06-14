@@ -1,36 +1,29 @@
 {
-  "name": "Clippy Reincarnation for Clean Code Indoctrination",
-  "version": "0.0.1",
-  "manifest_version": 2,
-  "description": "clippy to help you",
-  "homepage_url": "https://github.com/apokellypse/browser-clippy-indoctrination",
-  "background": {
-    "scripts": [
-      "background.js"
-    ],
-    "persistent": false
+  "name": "Clippy",
+  "version": "1.0.0",
+  "description": "clippy",
+  "browser_action": {
+    "default_title": "Open the popup",
+    "default_popup" : "popup.html"
   },
-  "content_scripts": [ 
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
+    "content_scripts": [ 
     {
       "matches": ["<all_urls>"],
       "css": [ "clippy.css" ],
       "js": [ 
         "jquery-1.7.min.js",
-        "clippy.min.js",
-        "script.js"
+        "clippy.min.js"
       ]
     } 
   ],
   "web_accessible_resources": [
     "clippy.css",
     "jquery-1.7.min.js",
-    "clippy.min.js",
-    "script.js"
+    "clippy.min.js"
   ],
-  "browser_action": {
-    "default_title": "Clippy Indoctrination"
-  },
-  "permissions": [
+    "permissions": [
     "https://*/*",
     "http://*/*",
     "tabs",
