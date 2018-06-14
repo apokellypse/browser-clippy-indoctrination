@@ -11,7 +11,9 @@
 		<script type="text/javascript">
 	    clippy.load('Clippy', function(agent){
 	        // do anything with the loaded agent
+	        var arr = ['Truth can only be found in one place: the code.', 'So if you want to go fast, if you want to get done quickly, if you want your code to be easy to write, make it easy to read.', 'You are reading this book for two reasons. First, you are a programmer. Second, you want to be a better programmer. Good. We need better programmers.', 'How can we make sure we wind up behind the right door when the going gets tough? The answer is: craftsmanship.', 'Honesty in small things is not a small thing.'];
 	        agent.show();
+	        agent.speak(arr[Math.floor(Math.random() * arr.length)]);
 	    });
 		</script>
 	</body>
