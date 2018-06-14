@@ -1,21 +1,39 @@
 {
-  "name": "Injecta",
+  "name": "Clippy Reincarnation for Clean Code Indoctrination",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Injecting stuff",
-  "homepage_url": "http://danharper.me",
+  "description": "clippy to help you",
+  "homepage_url": "https://github.com/apokellypse/browser-clippy-indoctrination",
   "background": {
     "scripts": [
       "background.js"
     ],
-    "persistent": true
+    "persistent": false
   },
+  "content_scripts": [ 
+    {
+      "matches": ["<all_urls>"],
+      "css": [ "clippy.css" ],
+      "js": [ 
+        "jquery-1.7.min.js",
+        "clippy.min.js",
+        "script.js"
+      ]
+    } 
+  ],
+  "web_accessible_resources": [
+    "clippy.css",
+    "jquery-1.7.min.js",
+    "clippy.min.js",
+    "script.js"
+  ],
   "browser_action": {
-    "default_title": "Inject!"
+    "default_title": "Clippy Indoctrination"
   },
   "permissions": [
     "https://*/*",
     "http://*/*",
-    "tabs"
+    "tabs",
+    "<all_urls>"
   ]
 }
